@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { CoverListService } from 'src/app/services/cover-list.service';
 
 @Component({
-  selector: 'app-cover-box',
-  templateUrl: './cover-box.component.html',
-  styleUrls: ['./cover-box.component.scss']
+  selector: 'app-tv-show-slot',
+  templateUrl: './tv-show-slot.component.html',
+  styleUrls: ['./tv-show-slot.component.scss']
 })
-export class CoverBoxComponent implements OnInit {
+export class TvShowSlotComponent implements OnInit {
 
-  public id = 123;
-  public cover_images_temp;
-  public cover_image;
+
   public cover_photos = [];
   public base_url;
-  constructor(
-    private coverlistService: CoverListService
-  ) { }
+  public movie_images_temp;
+  public movie_image;
+
+  constructor(private coverlistService: CoverListService) { }
 
   ngOnInit(): void {
     //Get configurations 
@@ -23,13 +22,13 @@ export class CoverBoxComponent implements OnInit {
       this.base_url = data.images.base_url + 'original';
       console.log(this.base_url);
       // Get all tv posters to the temp array 
-      this.coverlistService.getMovieCover().subscribe(data => {
+      this.coverlistService.getTrendingTvShows().subscribe(data => {
         console.log(data.results);
-        this.cover_images_temp = data.results;
-        this.cover_images_temp.forEach(element => {
+        this.movie_images_temp = data.results;
+        this.movie_images_temp.forEach(element => {
           this.cover_photos.push(this.base_url + element.poster_path);
         });
-        this.cover_image = this.cover_photos.slice(0, 1)
+        this.movie_image = this.cover_photos.slice(0, 1)
         this.cover_photos = this.cover_photos.slice(1, 4);
         console.log(this.cover_photos);
       });

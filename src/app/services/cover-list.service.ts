@@ -11,7 +11,9 @@ export class CoverListService {
     'Content-Type': 'application/json; charset=utf-8',
     'Access-Control-Allow-Origin': '*'
   });
-  public url = 'https://api.themoviedb.org/3/tv/';
+  public url = 'https://api.themoviedb.org/3/movie/top_rated/';
+  public url_top_movies = 'https://api.themoviedb.org/3/movie/top_rated/';
+  public url_top_shows = 'https://api.themoviedb.org/3/tv/top_rated/';
   public config_url = 'https://api.themoviedb.org/3/configuration';
   public apikey = 'c3f250deea0fe0862680a809246365e6';
   public params = new HttpParams().set('api_key', this.apikey);
@@ -25,14 +27,17 @@ export class CoverListService {
   /**
   * Get initial data collection from movie list
   */
-  public getMovieCover(id: number): Observable<any> {
+  public getMovieCover(): Observable<any> {
     const params = new HttpParams().set('api_key', this.apikey);
-    return this.http.get(`${this.url}` + id + '/images', { params });
+    return this.http.get(`${this.url}`, { params });
   }
-  // getCertification(id: string) : Observable<any>  {
-  //   const params = new HttpParams()
-  //   .set('api_key', this.apikey);
-  //   return this.http.get('https://api.themoviedb.org/3/movie/'+ id +'/release_dates', {params})
 
-  // }
+  public getTrendingMovies(): Observable<any> {
+    const params = new HttpParams().set('api_key', this.apikey);
+    return this.http.get(`${this.url_top_movies}`, { params });
+  }
+  public getTrendingTvShows(): Observable<any> {
+    const params = new HttpParams().set('api_key', this.apikey);
+    return this.http.get(`${this.url_top_shows}`, { params });
+  }
 }

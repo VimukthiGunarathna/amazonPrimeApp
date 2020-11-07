@@ -11,13 +11,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { faCaretDown, faMinus, faPlus, faShoppingBag, faSortAmountDownAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import { IvyCarouselModule } from 'angular-responsive-carousel/lib/carousel.module';
 import { CoverBoxComponent } from './public/cover-box/cover-box.component';
+import { MovieSlotComponent } from './public/movie-slot/movie-slot.component';
+import { TvShowSlotComponent } from './public/tv-show-slot/tv-show-slot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
     DashboardComponent,
-    CoverBoxComponent
+    CoverBoxComponent,
+    MovieSlotComponent,
+    TvShowSlotComponent
   ],
   imports: [
     BrowserModule,

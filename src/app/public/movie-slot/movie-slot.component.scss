@@ -1,0 +1,21 @@
+// .carousel-item {
+//   height: 40em;
+
+//   img {
+//     max-width: 100%;
+//     max-height: 100%;
+//     display: block;
+//   }
+// }
+
+.card-wrapper {
+  display: flex;
+}
+
+.card {
+    border: none;
+  .card-img-top {
+    height: 15rem;
+    width: 21rem;
+  }
+}

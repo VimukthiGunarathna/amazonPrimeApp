@@ -1,5 +1,5 @@
 .white-container {
-  background-color: white;
+  background-color: #191919;
   min-height: stretch;
   max-height: max-content;
   margin: 0 auto;
@@ -9,6 +9,23 @@
   height: auto;
   margin: 0 auto;
 }
+
 .cover-box-wrapper {
   // padding: 2em;
+}
+
+.movie-slot-wrapper {
+  padding: 2em;
+}
+.slot-heading {
+  display: flex;
+  span {
+    font-size: 24px;
+    color: white;
+  }
+  p {
+    padding-left: 15px;
+    color: #4F9FC6;
+    font-size: 17px;
+  }
 }
