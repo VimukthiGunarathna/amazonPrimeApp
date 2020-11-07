@@ -9,12 +9,15 @@ import { DashboardComponent } from './public/dashboard/dashboard.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { faCaretDown, faMinus, faPlus, faShoppingBag, faSortAmountDownAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { IvyCarouselModule } from 'angular-responsive-carousel/lib/carousel.module';
+import { CoverBoxComponent } from './public/cover-box/cover-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
-    DashboardComponent
+    DashboardComponent,
+    CoverBoxComponent
   ],
   imports: [
     BrowserModule,
