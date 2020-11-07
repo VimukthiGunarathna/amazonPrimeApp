@@ -1,19 +1,39 @@
-// .carousel-item {
-//   height: 40em;
+.carousel-item {
+  height: 32em;
 
-//   img {
-//     max-width: 100%;
-//     max-height: 100%;
-//     display: block;
-//   }
-// }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+}
+
+.carousel-inner {
+  height: 30em !important;
+}
+
+.slide-wrapper {
+  width: 24em !important;
+  height: 30em !important;
+}
+
+.img-wrapper {
+  width: 24em !important;
+  height: 30em !important;
+
+  img {
+    width: 24em;
+    height: 30em;
+  }
+}
 
 .card-wrapper {
   display: flex;
 }
 
 .card {
-    border: none;
+  border: none;
+
   .card-img-top {
     height: 15rem;
     width: 21rem;

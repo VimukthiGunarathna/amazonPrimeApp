@@ -12,6 +12,7 @@ export class MovieSlotComponent implements OnInit {
   public base_url;
   public movie_images_temp;
   public movie_image;
+  public slides: any = [[]];
 
   constructor(private coverlistService: CoverListService) { }
 
@@ -28,10 +29,18 @@ export class MovieSlotComponent implements OnInit {
           this.cover_photos.push(this.base_url + element.poster_path);
         });
         this.movie_image = this.cover_photos.slice(0, 1)
-        this.cover_photos = this.cover_photos.slice(1, 4);
+        // this.cover_photos = this.cover_photos.slice(1, 4);
         console.log(this.cover_photos);
+        this.slides = this.chunk(this.cover_photos, 4);
       });
     });
+  }
+  public chunk(arr: any, chunkSize: any) {
+    let R = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      R.push(arr.slice(i, i + chunkSize));
+    }
+    return R;
   }
 
 }

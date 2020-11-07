@@ -1,10 +1,29 @@
 .carousel-item {
-  height: 40em;
+  height: 32em;
 
   img {
     max-width: 100%;
     max-height: 100%;
     display: block;
+  }
+}
+
+.carousel-inner {
+  height: 30em !important;
+}
+
+.slide-wrapper {
+  width: 24em !important;
+  height: 30em !important;
+}
+
+.img-wrapper {
+  width: 24em !important;
+  height: 30em !important;
+
+  img {
+    width: 24em;
+    height: 30em;
   }
 }
 
