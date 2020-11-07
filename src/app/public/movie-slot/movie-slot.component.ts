@@ -8,7 +8,6 @@ import { CoverListService } from 'src/app/services/cover-list.service';
 })
 export class MovieSlotComponent implements OnInit {
 
-  public id = 123;
   public cover_photos = [];
   public base_url;
   public movie_images_temp;

@@ -8,7 +8,6 @@ import { CoverListService } from 'src/app/services/cover-list.service';
 })
 export class CoverBoxComponent implements OnInit {
 
-  public id = 123;
   public cover_images_temp;
   public cover_image;
   public cover_photos = [];
