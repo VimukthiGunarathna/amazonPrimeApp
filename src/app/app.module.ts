@@ -8,7 +8,7 @@ import { TopNavComponent } from './shared/top-nav/top-nav.component';
 import { DashboardComponent } from './public/dashboard/dashboard.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { faMinus, faPlus, faShoppingBag, faSortAmountDownAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faMinus, faPlus, faShoppingBag, faSortAmountDownAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,6 @@ import { faMinus, faPlus, faShoppingBag, faSortAmountDownAlt } from '@fortawesom
 })
 export class AppModule {
   constructor(private library: FaIconLibrary) {
-    library.addIcons(faShoppingBag, faSortAmountDownAlt, faPlus, faMinus);
+    library.addIcons(faPlus, faCaretDown, faUser);
   }
 }

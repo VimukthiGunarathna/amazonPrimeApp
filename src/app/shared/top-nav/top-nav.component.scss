@@ -1,0 +1,38 @@
+.top-nav {}
+
+.navbar-brand {
+  img {
+    width: 227px !important;
+    height: 64px !important;
+  }
+}
+
+.navbar {
+  background-color: #191919;
+}
+
+.nav-item {
+  a {
+    color: #616161;
+    font-size: 20px;
+  }
+}
+
+.search-bar {
+  background-color: #191919;
+  border-color: #616161;
+}
+
+.user-profile {
+  display: flex;
+
+  .user-icon {
+    padding-right: 10px;
+    font-size: 30px;
+    color: #616161;
+  }
+
+  padding-left: 35px;
+  font-size: 40px;
+  color: #616161;
+}
