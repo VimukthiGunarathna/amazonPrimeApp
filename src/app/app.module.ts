@@ -13,6 +13,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel/lib/carousel.modu
 import { CoverBoxComponent } from './public/cover-box/cover-box.component';
 import { MovieSlotComponent } from './public/movie-slot/movie-slot.component';
 import { TvShowSlotComponent } from './public/tv-show-slot/tv-show-slot.component';
+import { NgbAlertModule, NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,10 @@ import { TvShowSlotComponent } from './public/tv-show-slot/tv-show-slot.componen
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

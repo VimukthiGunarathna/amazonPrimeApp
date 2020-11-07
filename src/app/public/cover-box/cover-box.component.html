@@ -1,5 +1,5 @@
 <div class="cover-box">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -21,5 +21,17 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> -->
+    <ngb-carousel *ngIf="cover_photos">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper img-wrapper">
+                <img [src]="cover_image" alt="Random first slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide *ngFor="let pic of cover_photos">
+            <div class="picsum-img-wrapper img-wrapper">
+                <img [src]="pic" alt="Random second slide">
+            </div>
+        </ng-template>
+    </ngb-carousel>
 </div>
